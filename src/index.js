@@ -212,7 +212,7 @@ class SelectPure {
     this._icons = options.map(_option => {
       const selectedLabel = new Element("span", {
         class: this._config.classNames.selectedLabel,
-        textContent: _option.label,
+        textContent: this._config.shortlabels ? _option.value : _option.label,
       });
       const icon = new Element(this._config.inlineIcon ?
         this._config.inlineIcon.cloneNode(true) : "i", {

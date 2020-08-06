@@ -248,6 +248,7 @@ class SelectPure {
     }
 
     this._setValue(newValue, true, true);
+    event.stopPropagation();
   }
 
   _sortOptions(event) {
